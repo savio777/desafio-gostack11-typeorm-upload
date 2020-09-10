@@ -20,6 +20,8 @@ export default class AddTableTransaction1599620691585
             default: 'uuid_generate_v4()',
           },
           { name: 'title', type: 'varchar' },
+          { name: 'type', type: 'varchar' },
+          { name: 'value', type: 'float' },
           { name: 'category_id', type: 'uuid', isNullable: false },
           { name: 'created_at', type: 'timestamp', default: 'now()' },
           { name: 'updated_at', type: 'timestamp', default: 'now()' },
