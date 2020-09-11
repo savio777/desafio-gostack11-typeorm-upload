@@ -29,7 +29,7 @@ class CreateTransactionService {
     const { total } = await transactionsRepository.getBalance();
 
     if (type === 'outcome' && value > total) {
-      throw Error('there is no balance');
+      throw new AppError('there is no balance');
     }
 
     const categorieFindTitle = await categoriesRepository.getCategory(category);
